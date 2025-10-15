@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo Code Pathways | PolyU Learning Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js" type="module"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <p class="brand-label">PolyU Computing Coach</p>
+        <h1>Pseudo Code Pathways</h1>
+      </div>
+    </div>
+    <div class="progress-wrapper" aria-live="polite">
+      <span id="progress-percentage">0%</span>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-bar-fill"></div>
+      </div>
+    </div>
+    <button id="reset-progress" class="reset-button" type="button">Reset Progress</button>
+  </header>
+
+  <main class="layout">
+    <aside class="stage-navigation" aria-label="Learning stages">
+      <h2>Learning Journey</h2>
+      <ol id="stage-list"></ol>
+      <section class="reference-card">
+        <h3>Pseudo Code Quick Reference</h3>
+        <ul>
+          <li><strong>Structure:</strong> <code>BEGIN</code> ... <code>END</code></li>
+          <li><strong>Variables:</strong> <code>SET total TO 0</code>, <code>INPUT score</code></li>
+          <li><strong>Decisions:</strong> <code>IF condition THEN ... ELSE ...</code></li>
+          <li><strong>Loops:</strong> <code>FOR EACH item IN list</code> / <code>WHILE</code></li>
+          <li><strong>Functions:</strong> <code>FUNCTION ComputeAverage(values)</code></li>
+          <li><strong>Comments:</strong> <code>// explain intent clearly</code></li>
+        </ul>
+      </section>
+      <section class="reference-card hosting">
+        <h3>Ready for Deployment</h3>
+        <p>Built as a static web app – ideal for GitHub Pages, Netlify, or any static host. A backend can be added later for accounts or analytics.</p>
+      </section>
+    </aside>
+
+    <section class="stage-content" id="stage-content" aria-live="polite">
+      <!-- Dynamic content rendered by app.js -->
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Need a refresher on Python syntax? Once your pseudo code is solid, each line converts directly with consistent indentation and keywords.</p>
+    <p class="footnote">Designed for first-year PolyU computing students – intuitive, supportive, and ready for deeper expansion.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</body>
+</html>
